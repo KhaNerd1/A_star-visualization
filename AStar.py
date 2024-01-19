@@ -71,6 +71,7 @@ class AStar:
         # Start the Tkinter event loop
         self.window.mainloop()
 
+    # A* search algorithm
     def search(self, initState, goalState, canvas):
         self.fring = []
         self.expandedNodes = []
@@ -163,7 +164,7 @@ class AStar:
                             neighborNode.parent = currentNode
                     
         return None
-
+    #  Euclidean distance formula
     def heuristic(self, node, goalState):
         dx = abs(node.x - goalState.x)
         dy = abs(node.y - goalState.y)
